@@ -50,22 +50,22 @@ options = list(range(len(value)))
 
 
 def input_variable():
-    LamdaC = st.sidebar.slider('Slenderness ratio', X_encoded.LamdaC.min(), X_encoded.LamdaC.max(),
-                               X_encoded.LamdaC.mean())
-    Ag = st.sidebar.slider('Column gross sectional area, (mm2)', X_encoded.Ag.min(), X_encoded.Ag.max(),
-                           X_encoded.Ag.mean())
-    fcp = st.sidebar.slider('Compressive strength of concrete, (MPa)', X_encoded.fcp.min(), X_encoded.fcp.max(),
-                            X_encoded.fcp.mean())
-    RhoEf = st.sidebar.slider('Longitudinal reinforcement ratio, RhoEf (%)', X_encoded.RhoEf.min(),
-                              X_encoded.RhoEf.max(), X_encoded.RhoEf.mean())
-    EfrpL = st.sidebar.slider('Modulus of elasticity of FRP reinforcement, (GPa)', X_encoded.EfrpL.min(),
-                              X_encoded.EfrpL.max(), X_encoded.EfrpL.mean())
-    ffuL = st.sidebar.slider('Ultimate strength of FRP reinforcement, (MPa) ', X_encoded.ffuL.min(),
-                             X_encoded.ffuL.max(), X_encoded.ffuL.mean())
-    SpacPitch = st.sidebar.slider('Spacing/pitch of transversal reinforcement, (mm) ', X_encoded.SpacPitch.min(),
-                                  X_encoded.SpacPitch.max(), X_encoded.SpacPitch.mean())
-    EoverD = st.sidebar.slider('Eccentricity ratio (%)', X_encoded.EoverD.min(), X_encoded.EoverD.max(),
-                               X_encoded.EoverD.mean())
+    LamdaC = st.sidebar.slider('Slenderness ratio', float(X_encoded.LamdaC.min()), float(X_encoded.LamdaC.max()),
+                               float(X_encoded.LamdaC.mean()))
+    Ag = st.sidebar.slider('Column gross sectional area, (mm2)', float(X_encoded.Ag.min()), float(X_encoded.Ag.max()),
+                           float(X_encoded.Ag.mean()))
+    fcp = st.sidebar.slider('Compressive strength of concrete, (MPa)', float(X_encoded.fcp.min()), float(X_encoded.fcp.max()),
+                            float(X_encoded.fcp.mean()))
+    RhoEf = st.sidebar.slider('Longitudinal reinforcement ratio, RhoEf (%)', float(X_encoded.RhoEf.min()),
+                              float(X_encoded.RhoEf.max()), float(X_encoded.RhoEf.mean()))
+    EfrpL = st.sidebar.slider('Modulus of elasticity of FRP reinforcement, (GPa)', float(X_encoded.EfrpL.min()),
+                              float(X_encoded.EfrpL.max()), float(X_encoded.EfrpL.mean()))
+    ffuL = st.sidebar.slider('Ultimate strength of FRP reinforcement, (MPa) ', float(X_encoded.ffuL.min()),
+                             float(X_encoded.ffuL.max()), float(X_encoded.ffuL.mean()))
+    SpacPitch = st.sidebar.slider('Spacing/pitch of transversal reinforcement, (mm) ', float(X_encoded.SpacPitch.min()),
+                                  float(X_encoded.SpacPitch.max()), float(X_encoded.SpacPitch.mean()))
+    EoverD = st.sidebar.slider('Eccentricity ratio (%)', float(X_encoded.EoverD.min()), float(X_encoded.EoverD.max()),
+                               float(X_encoded.EoverD.mean()))
     Circular = st.sidebar.radio('Column section type', ('Rectangular/Square', 'Circular'))
     TypeCon = st.sidebar.radio('Concrete type', ('NWC', 'LWC', 'GC'))
     TypeL = st.sidebar.radio('Type of longitudinal reinforcement', ('GFRP', 'CFRP', 'BFRP'))

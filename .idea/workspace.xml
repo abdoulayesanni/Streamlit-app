@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c32ae5c-668b-4d78-a34f-f3a3627229f4" name="Default Changelist" comment="" />
+    <list default="true" id="1c32ae5c-668b-4d78-a34f-f3a3627229f4" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FRP-RC-app.py" beforeDir="false" afterPath="$PROJECT_DIR$/FRP-RC-app.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,10 +33,23 @@
       <option name="presentableId" value="Default" />
       <updated>1623300663043</updated>
       <workItem from="1623300665904" duration="306000" />
+      <workItem from="1623302620336" duration="16000" />
+      <workItem from="1623302654676" duration="73000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
