@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
-import altair as alt
 from PIL import Image
 import xgboost as xgb
 import shap
