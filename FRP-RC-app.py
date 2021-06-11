@@ -155,7 +155,7 @@ st.write('---')
 
 xgb_model = pickle.load(open('FRPRC_xgb_model.pkl', 'rb'))
 
-prediction = xgb_model.predict(df)
+prediction = xgb_model.predict(df)[0]
 
 st.header('Predicted maximun axial load')
 st.write('Pmax =', prediction)
