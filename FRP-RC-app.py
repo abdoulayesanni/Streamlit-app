@@ -10,7 +10,7 @@ st.image(image, use_column_width=True)
 st.write("""
 # Expalinable XGBoost Prediction of Axial Load-Carrying Capacity of FRP-RC Columns
 
-This app predict the axial load-carrying capacity of FRP-RC columns
+This app predicts the axial load-carrying capacity of FRP-RC columns
 
 ***
 """)
