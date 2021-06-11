@@ -1,12 +1,9 @@
 import pandas as pd
-import matplotlib.pyplot as plt
 import streamlit as st
 from PIL import Image
-import xgboost as xgb
-import shap
 import pickle
 
-image = Image.open('Flowchart.jpg')
+image = Image.open('Flowchart.png')
 
 st.image(image, use_column_width=True)
 
@@ -162,18 +159,12 @@ st.write('Pmax =', prediction, 'kN')
 st.write('---')
 
 # Explaining the model's predictions using SHAP values
-
-explainer = shap.TreeExplainer(xgb_model)
-shap_values = explainer.shap_values(X_encoded)
-
 st.header('Interpretation of XGBoost prediction model using SHAP values')
 
-fig, ax = plt.subplots(figsize=(15, 5))
-ax.set_title('SHAP summary plot', fontweight="bold", fontsize=16, pad=20)
-shap.summary_plot(shap_values, X_encoded)
-st.pyplot(fig, bbox_inches='tight')
+image = Image.open('SHAP_summary_plot.png')
+st.image(image, use_column_width=True)
+st.markdown('## **SHAP summary plot**')
 
-fig, ax = plt.subplots(figsize=(15, 5))
-ax.set_title('Relative importance for each feature', fontweight="bold", fontsize=16, pad=20)
-shap.summary_plot(shap_values, X_encoded, plot_type="bar")
-st.pyplot(fig, bbox_inches='tight')
+image = Image.open('SHAP_relative_importance.png')
+st.image(image, use_column_width=True)
+st.markdown('## **Relative importance for each feature**')
