@@ -155,10 +155,10 @@ st.write('---')
 
 xgb_model = pickle.load(open('FRPRC_xgb_model.pkl', 'rb'))
 
-prediction = xgb_model.predict(df)[0]
+prediction = xgb_model.predict(df)
 
 st.header('Predicted maximun axial load')
-st.write('Pmax =', prediction)
+st.write('Pmax =', prediction[0])
 st.write('---')
 
 # Explaining the model's predictions using SHAP values
