@@ -49,17 +49,17 @@ options = list(range(len(value)))
 def input_variable():
     LamdaC = st.sidebar.slider('Slenderness ratio', float(X_encoded.LamdaC.min()), float(X_encoded.LamdaC.max()),
                                float(X_encoded.LamdaC.mean()))
-    Ag = st.sidebar.slider('Column gross sectional area, (mm2)', float(X_encoded.Ag.min()), float(X_encoded.Ag.max()),
+    Ag = st.sidebar.slider('Column gross sectional area (mm2)', float(X_encoded.Ag.min()), float(X_encoded.Ag.max()),
                            float(X_encoded.Ag.mean()))
-    fcp = st.sidebar.slider('Compressive strength of concrete, (MPa)', float(X_encoded.fcp.min()), float(X_encoded.fcp.max()),
+    fcp = st.sidebar.slider('Compressive strength of concrete (MPa)', float(X_encoded.fcp.min()), float(X_encoded.fcp.max()),
                             float(X_encoded.fcp.mean()))
-    RhoEf = st.sidebar.slider('Longitudinal reinforcement ratio, RhoEf (%)', float(X_encoded.RhoEf.min()),
+    RhoEf = st.sidebar.slider('Longitudinal reinforcement ratio (%)', float(X_encoded.RhoEf.min()),
                               float(X_encoded.RhoEf.max()), float(X_encoded.RhoEf.mean()))
-    EfrpL = st.sidebar.slider('Modulus of elasticity of FRP reinforcement, (GPa)', float(X_encoded.EfrpL.min()),
+    EfrpL = st.sidebar.slider('Modulus of elasticity of FRP reinforcement (GPa)', float(X_encoded.EfrpL.min()),
                               float(X_encoded.EfrpL.max()), float(X_encoded.EfrpL.mean()))
-    ffuL = st.sidebar.slider('Ultimate strength of FRP reinforcement, (MPa) ', float(X_encoded.ffuL.min()),
+    ffuL = st.sidebar.slider('Ultimate strength of FRP reinforcement (MPa) ', float(X_encoded.ffuL.min()),
                              float(X_encoded.ffuL.max()), float(X_encoded.ffuL.mean()))
-    SpacPitch = st.sidebar.slider('Spacing/pitch of transversal reinforcement, (mm) ', float(X_encoded.SpacPitch.min()),
+    SpacPitch = st.sidebar.slider('Spacing/pitch of transversal reinforcement (mm) ', float(X_encoded.SpacPitch.min()),
                                   float(X_encoded.SpacPitch.max()), float(X_encoded.SpacPitch.mean()))
     EoverD = st.sidebar.slider('Eccentricity ratio (%)', float(X_encoded.EoverD.min()), float(X_encoded.EoverD.max()),
                                float(X_encoded.EoverD.mean()))
@@ -154,7 +154,7 @@ xgb_model = pickle.load(open('FRPRC_xgb_model.pkl', 'rb'))
 
 prediction = xgb_model.predict(df)[0]
 
-st.header('Predicted maximun axial load')
+st.header('Predicted load-carrying capacity')
 st.write('Pmax =', prediction, 'kN')
 st.write('---')
 
