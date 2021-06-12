@@ -146,7 +146,7 @@ def input_variable():
 
 df = input_variable()
 
-st.header('Specified Input parameters')
+st.header('Specified Input Parameters')
 st.write(df)
 st.write('---')
 
@@ -154,7 +154,7 @@ xgb_model = pickle.load(open('FRPRC_xgb_model.pkl', 'rb'))
 
 prediction = xgb_model.predict(df)[0]
 
-st.header('Predicted load-carrying capacity')
+st.header('Predicted Load-Carrying Capacity')
 st.write('Pmax =', prediction, 'kN')
 st.write('---')
 
